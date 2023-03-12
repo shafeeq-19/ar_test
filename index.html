@@ -16,28 +16,39 @@
      loading-screen="dotsColor: white; backgroundColor: #10033f"
     >
     <a-assets>
-        <a-asset-item id="tree" src="fl.gltf"></a-asset-item>
-        <a-asset-item id="tedy" src="tedy.gltf"></a-asset-item>
-        <!-- <a-asset-item id="baby" src="ba.png"></a-asset-item> -->
-        <img id="baby" src="ba.png">
-        <img id="dec" src="dec.png">
-        <img id="babys" src="pngegg.png">
+        <a-asset-item id="stand_board" src="./3dmodel/stand_board.gltf"></a-asset-item>
+        <a-asset-item id="baloon" src="./3dmodel/cacke.gltf"></a-asset-item>
+        <a-asset-item id="arch" src="./3dmodel/arch.gltf"></a-asset-item>
+        <a-asset-item id="wall" src="./3dmodel/wall.gltf"></a-asset-item>
+        <img id="baby-poster" src="./images/babyposter.png">
+        <img id="mat" src="./images/mat.jpg">
+       
       </a-assets>
-      <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box> -->
-      <a-image src="#dec" position="-0.022 0.934 -7.597" rotation="-0.404 0.129 -0.696" scale="8.076 4.047 1.215" shadow></a-image>
+      <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-image src="#dec" position="-0.022 0.934 -7.597" rotation="-0.404 0.129 -0.696" scale="8.076 4.047 1.215" shadow></a-image> -->
 
-      <a-entity gltf-model="#tree" position="-0.755 -0.718 -5.000" scale="0.702 1.047 1.000" rotation="0 20 0" ></a-entity>
+      <!-- <a-entity gltf-model="#tree" position="-0.755 -0.718 -5.000" scale="0.702 1.047 1.000" rotation="0 20 0" ></a-entity>
       <a-entity gltf-model="#tree" position="0.000 -0.662 -5.000" scale="0.702 1.047 1.000" rotation="0 20 0" ></a-entity>
-      <a-entity gltf-model="#tree" position="0.944 -0.670 -5.000" scale="0.702 1.047 1.000" rotation="0 20 0" ></a-entity>
+      <a-entity gltf-model="#tree" position="0.944 -0.670 -5.000" scale="0.702 1.047 1.000" rotation="0 20 0" ></a-entity> -->
       <!-- <a-entity rotation="0 0 0" animation="property: position; from:0.585 -0.945 -2.135 to: 0.585 0.996 -2.135; loop: true; dur: 10000">
         <a-entity gltf-model="#tedy" position="0.585 0.506 -2.135" rotation="-0.172 -26.891 0.367" sacle="0.5 0.5 0.5"></a-entity>
       </a-entity> -->
-      <a-entity gltf-model="#tedy" animation="property: position; from:0.585 -0.945 -2.135; to:0.585 -0.070 -2.135; dur: 2000; easing: linear; " position="0.585 0.506 -2.135" rotation="-0.172 -26.891 0.367" sacle="0.5 0.5 0.5"></a-entity>
+      <!-- <a-entity gltf-model="#tedy" animation="property: position; from:0.585 -0.945 -2.135; to:0.585 -0.070 -2.135; dur: 2000; easing: linear; " position="0.585 0.506 -2.135" rotation="-0.172 -26.891 0.367" sacle="0.5 0.5 0.5"></a-entity> -->
 
-      <a-image src="#baby" position="0.020 0.247 -1.844" rotation="-81.342 4.698 -4.625" width="1.6" height="1.8" shadow></a-image>
+      <!-- <a-image src="#baby" position="0.020 0.247 -1.844" rotation="-81.342 4.698 -4.625" width="1.6" height="1.8" shadow></a-image> -->
       <!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>-->
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="5" height="7" color="#e3e1b8"></a-plane> 
+      <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="5" height="7" color="#e3e1b8"></a-plane>  -->
+      <a-entity gltf-model="#wall" position="0.403 0.397 -1.105" rotation="0.000 -96.858 0.809" scale="1.396 1.234 -1.790" ></a-entity>
+
+      <a-entity gltf-model="#baloon" position="0.120 0.527 -3.699" rotation="-3.340 0.490 0.000" scale="0.606 0.394 -1.790" ></a-entity>
+      <a-entity gltf-model="#arch" position="-0.103 0.491 -3.699" rotation="0.000 0.000 0.000" scale="2.796 1.914 0.230" ></a-entity>
+
+      <a-image src="#baby-poster" position="-0.602 1.726 -0.558" rotation="-12.992 38.085 0.367" scale="0.560 0.540 3.180" shadow></a-image>
+
+      <a-entity gltf-model="#stand_board" position="-1.223 1.813 -1.292" rotation="-0.002 38.025 0.367" scale="3.290 2.640 2.930"></a-entity>
+
+      <a-image src="#mat" position="0.002 0.361 -2.332" rotation="-84.332 5.038 -3.695" scale="3.180 3.180 3.180" shadow></a-image>
       <a-camera  rotation-reader> </a-camera>
    
     </a-scene>
