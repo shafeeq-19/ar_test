@@ -1,29 +1,65 @@
-
 <html>
   <head>
-    <title>aframe-chromakey-material example</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script> 
+  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@tagOrCommit/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <!-- <script src="https://unpkg.com/aframe-sprite-particles-component@^0.5.0/aframe-sprite-particles-component.js"></script> -->
   </head>
-
   <body>
-    
     <video style="opacity: 0;" id="greenscreenvideo" src="images/vd.mp4" loop autoplay muted></video>
-    <a-scene
-    vr-mode-ui="enabled: false"
-    arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
-    loading-screen="dotsColor: white; backgroundColor: #10033f"
-   >
-   <a-assets>
-        
-    <img id="mat" src="./images/mat.jpg">
-   
-  </a-assets>
-  
-      <a-image src="#mat" position="0 0 -5" rotation="-90 0 0" width="16" height="9"></a-image>
+     <a-scene
+     vr-mode-ui="enabled: false"
+     arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+     loading-screen="dotsColor: white; backgroundColor: #10033f"
+    >
+    <a-assets>
+        <a-asset-item id="stand_board" src="./3dmodel/stand_board.gltf"></a-asset-item>
+        <a-asset-item id="baloon" src="./3dmodel/cacke.gltf"></a-asset-item>
+        <a-asset-item id="arch" src="./3dmodel/arch.gltf"></a-asset-item>
+        <a-asset-item id="wall" src="./3dmodel/wall.gltf"></a-asset-item>
+        <a-asset-item id="lamp" src="./3dmodel/lamp.gltf"></a-asset-item>
+        <img id="baby-poster" src="./images/babyposter.png">
+        <img id="mat" src="./images/mat.jpg">
+        <img id="bg" src="./images/bg1.png">
+        <img id="frame" src="./images/frame.png">
+        <video style="opacity: 0;" id="greenscreenvideo" src="images/vd.mp4" loop autoplay muted></video>
+      </a-assets>
+      <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-image src="#dec" position="-0.022 0.934 -7.597" rotation="-0.404 0.129 -0.696" scale="8.076 4.047 1.215" shadow></a-image> -->
+
+      <!-- <a-entity gltf-model="#tree" position="-0.755 -0.718 -5.000" scale="0.702 1.047 1.000" rotation="0 20 0" ></a-entity>
+      <a-entity gltf-model="#tree" position="0.000 -0.662 -5.000" scale="0.702 1.047 1.000" rotation="0 20 0" ></a-entity>
+      <a-entity gltf-model="#tree" position="0.944 -0.670 -5.000" scale="0.702 1.047 1.000" rotation="0 20 0" ></a-entity> -->
+      <!-- <a-entity rotation="0 0 0" animation="property: position; from:0.585 -0.945 -2.135 to: 0.585 0.996 -2.135; loop: true; dur: 10000">
+        <a-entity gltf-model="#tedy" position="0.585 0.506 -2.135" rotation="-0.172 -26.891 0.367" sacle="0.5 0.5 0.5"></a-entity>
+      </a-entity> -->
+      <!-- <a-entity gltf-model="#tedy" animation="property: position; from:0.585 -0.945 -2.135; to:0.585 -0.070 -2.135; dur: 2000; easing: linear; " position="0.585 0.506 -2.135" rotation="-0.172 -26.891 0.367" sacle="0.5 0.5 0.5"></a-entity> -->
+
+      <!-- <a-image src="#baby" position="0.020 0.247 -1.844" rotation="-81.342 4.698 -4.625" width="1.6" height="1.8" shadow></a-image> -->
+      <!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>-->
+      <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="5" height="7" color="#e3e1b8"></a-plane>  -->
+      <a-entity gltf-model="#wall" position="0.403 0.397 -1.105" rotation="0.000 -96.858 0.809" scale="1.396 1.234 -1.790" ></a-entity>
+      <a-image src="#frame" position="1.395 1.891 -0.925" rotation="0.000 -92.315 0.000" scale="0.467 0.353 -3.140" ></a-image>
+
+      <a-entity gltf-model="#baloon" position="0.120 0.527 -3.001" rotation="-3.340 0.490 0.000" scale="0.576 0.292 -1.190" ></a-entity>
+      <!-- <a-entity gltf-model="#arch" position="-0.103 0.491 -3.699" rotation="0.000 0.000 0.000" scale="2.796 1.914 0.230" ></a-entity> -->
+      <a-image src="#bg" position="1.079 1.818 -3.849" rotation="0.000 0.000 0.000" scale="1.633 1.143 -1.436" ></a-image>
+
+      <a-entity gltf-model="#lamp" position="0.155 0.481 -3.984" rotation="0.000 -179.047 0.000" scale="3.057 3.973 -1.790" ></a-entity>
+      <a-entity gltf-model="#wall" position="-1.031 0.491 -5.049" rotation="0.000 -179.047 0.000" scale="1.396 1.234 -1.790" ></a-entity>
+
+      <a-image src="#baby-poster" position="-0.602 1.726 -0.558" rotation="-12.992 38.085 0.367" scale="0.560 0.540 3.180" shadow></a-image>
+
+      <a-entity gltf-model="#stand_board" position="-1.223 1.813 -1.292" rotation="-0.002 38.025 0.367" scale="3.290 2.640 2.930"></a-entity>
+
+      <a-image src="#mat" position="0.002 0.361 -2.332" rotation="-84.332 5.038 -3.695" scale="3.180 3.180 3.180" shadow></a-image>
       <a-video src="#greenscreenvideo" width="8" height="3" position="0 1.571 -3.218" material="shader: chromakey; color: 0.1 0.9 0.2;"></a-video>
       <a-camera  rotation-reader> </a-camera>
+   
     </a-scene>
   </body>
 </html>
