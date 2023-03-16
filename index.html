@@ -8,18 +8,19 @@
   </head>
 
   <body>
-    <a-assets>
-        
-        <img id="mat" src="./images/mat.jpg">
-       
-      </a-assets>
+    
     <video style="opacity: 0;" id="greenscreenvideo" src="images/vd.mp4" loop autoplay muted></video>
     <a-scene
     vr-mode-ui="enabled: false"
     arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
     loading-screen="dotsColor: white; backgroundColor: #10033f"
    >
-    
+   <a-assets>
+        
+    <img id="mat" src="./images/mat.jpg">
+   
+  </a-assets>
+  
       <a-image src="#mat" position="0 0 -5" rotation="-90 0 0" width="16" height="9"></a-image>
       <a-video src="#greenscreenvideo" width="8" height="3" position="0 1.571 -3.218" material="shader: chromakey; color: 0.1 0.9 0.2;"></a-video>
       <a-camera  rotation-reader> </a-camera>
