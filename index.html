@@ -1,27 +1,28 @@
-<!DOCTYPE html>
+
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A-Frame Chroma Key on Video Entity Example</title>
+    <title>aframe-chromakey-material example</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-chromakey-material/dist/aframe-chromakey-material.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   </head>
+
   <body>
-    <a-scene
-     vr-mode-ui="enabled: false"
-     arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
-     loading-screen="dotsColor: white; backgroundColor: #10033f"
-    >
-      <a-assets>
-        <video id="video" autoplay loop="true" src="images/vd.mp4"></video>
-        <img id="mat" src="images/mat.jpg">
+    <a-assets>
+        
+        <img id="mat" src="./images/mat.jpg">
+       
       </a-assets>
-      <!-- <a-plane position="0 0 -5" rotation="-90 0 0" width="16" height="9" material="color: #AAA;"></a-plane> -->
+    <video style="opacity: 0;" id="greenscreenvideo" src="images/vd.mp4" loop autoplay muted></video>
+    <a-scene
+    vr-mode-ui="enabled: false"
+    arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+    loading-screen="dotsColor: white; backgroundColor: #10033f"
+   >
+    
       <a-image src="#mat" position="0 0 -5" rotation="-90 0 0" width="16" height="9"></a-image>
-      <a-video src="#video" width="8" height="3" position="0 1.571 -3.218"></a-video>
-      <a-camera position="0 1.6 0"></a-camera>
+      <a-video src="#greenscreenvideo" width="8" height="3" position="0 1.571 -3.218" material="shader: chromakey; color: 0.1 0.9 0.2;"></a-video>
+      <a-camera  rotation-reader> </a-camera>
     </a-scene>
   </body>
 </html>
